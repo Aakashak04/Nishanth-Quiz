@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <!-- Page 1 -->
+        <div class="page" id="page-1">
+            <h2>Page 1</h2>
+            <div class="question">
+                <label for="q1">1. What is the capital of France? (Text):</label>
+                <input type="text" id="q1">
+            </div>
+            <div class="question">
+                <label>2. Which of the following are fruits? (Checkbox):</label>
+                <input type="checkbox" id="q2a" value="apple"> Apple
+                <input type="checkbox" id="q2b" value="carrot"> Carrot
+                <input type="checkbox" id="q2c" value="banana"> Banana
+            </div>
+            <div class="question">
+                <label>3. What is 2 + 2? (Radio):</label>
+                <input type="radio" name="q3" id="q3a" value="3"> 3
+                <input type="radio" name="q3" id="q3b" value="4"> 4
+                <input type="radio" name="q3" id="q3c" value="5"> 5
+            </div>
+            <div class="question">
+                <label for="q4">4. Select the largest planet in our solar system (Dropdown):</label>
+                <select id="q4">
+                    <option value="Earth">Earth</option>
+                    <option value="Mars">Mars</option>
+                    <option value="Jupiter">Jupiter</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q5">5. Who wrote 'Hamlet'? (Text):</label>
+                <input type="text" id="q5">
+            </div>
+            <button onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="page" id="page-2" style="display: none;">
+            <h2>Page 2</h2>
+            <!-- Add more questions for page 2 -->
+            <div class="question">
+                <label for="q6">6. What is the square root of 16? (Text):</label>
+                <input type="text" id="q6">
+            </div>
+            <div class="question">
+                <label>7. Select the colors of the rainbow (Checkbox):</label>
+                <input type="checkbox" id="q7a" value="red"> Red
+                <input type="checkbox" id="q7b" value="green"> Green
+                <input type="checkbox" id="q7c" value="black"> Black
+            </div>
+            <div class="question">
+                <label>8. What is the capital of Japan? (Radio):</label>
+                <input type="radio" name="q8" id="q8a" value="Beijing"> Beijing
+                <input type="radio" name="q8" id="q8b" value="Seoul"> Seoul
+                <input type="radio" name="q8" id="q8c" value="Tokyo"> Tokyo
+            </div>
+            <div class="question">
+                <label for="q9">9. Select the smallest continent (Dropdown):</label>
+                <select id="q9">
+                    <option value="Asia">Asia</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Antarctica">Antarctica</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="q10">10. What is the speed of light? (Text):</label>
+                <input type="text" id="q10">
+            </div>
+            <button onclick="previousPage()">Previous</button>
+            <button onclick="nextPage()">Next</button>
+        </div>
+
+        <!-- More pages as needed -->
+
+        <!-- Final Submission -->
+        <div class="page" id="page-5" style="display: none;">
+            <h2>Submit your answers</h2>
+            <button onclick="calculateScore()">Submit Quiz</button>
+        </div>
+
+        <div id="result-popup" style="display: none;">
+            <h2>Your Score:</h2>
+            <p id="score"></p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
